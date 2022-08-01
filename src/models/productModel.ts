@@ -9,6 +9,11 @@ const productModel = {
     const [result] = await connection.execute<ResultSetHeader>(query, [name, amount]);
     return { id: result.insertId, name, amount };
   },
+  listProduct: async () => {
+    const query = 'SELECT * FROM Trybesmith.Products';
+    const [result] = await connection.query(query);
+    return result;
+  },
 };
 
 export default productModel;

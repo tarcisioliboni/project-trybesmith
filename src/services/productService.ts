@@ -6,6 +6,10 @@ const productService = {
     const result = await productModel.addProduct(product);
     return result;
   },
+  listProduct: async () => {
+    const result = await productModel.listProduct();
+    return result;
+  },
 };
 
 export default productService;
